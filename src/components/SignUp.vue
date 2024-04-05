@@ -2,7 +2,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <h1>Sign Up</h1>
 
-    <div class="position-relative top-0 start-50 translate-middle-x">
+    <div class="form position-relative top-0 start-50 translate-middle-x">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">User Name</label>
             <input type="text" v-model="name" class="form-control" id="username" aria-describedby="emailHelp">
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style>
-form {
+.form {
     /* width: 300px;
    text-align:left;
    margin-left: 200px;

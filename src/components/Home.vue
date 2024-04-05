@@ -6,7 +6,17 @@
 </template>
 
 <script>
+
+
 export default {
-    name:'HomePage'
+    name:'HomePage',
+    mounted(){
+        let user = localStorage.getItem('userInfo');
+        if(!user){
+            this.$router.push({name:'SignUp'});
+        }
+    }
 }
+
+
 </script>
