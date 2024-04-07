@@ -18,4 +18,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+
+
+.form {
+    /* width: 300px;
+   text-align:left;
+   margin-left: 200px;
+   display: block; */
+
+
+    justify-content: center;
+    text-align: left;
+    height: 500px;
+    width: 400px;
+}
 </style>

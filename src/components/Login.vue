@@ -1,13 +1,9 @@
 <template>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <h1>Sign Up</h1>
+    <h1>Login</h1>
 
     <div class="form position-relative top-0 start-50 translate-middle-x">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">User Name</label>
-            <input type="text" v-model="name" class="form-control" id="username" aria-describedby="emailHelp">
-
-        </div>
+  
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email Address</label>
             <input type="email" v-model="email" class="form-control" id="exampleInputEmail1"
@@ -23,55 +19,49 @@
             <input type="password" class="form-control" id="exampleInputPassword1">
         </div> -->
 
-        <button type="submit" v-on:click="submit" class="btn btn-primary">Sign Up</button>
+        <button type="submit" v-on:click="login" class="btn btn-primary">Log In</button>
+        <p style="text-align: center;"><router-link to="/signup"> Sign In</router-link></p>
 
-        <p style="text-align: center;"><router-link to="/login"> login</router-link></p>
     </div>
 
 
 </template>
 
-
 <script>
 import axios from 'axios';
 export default {
-    name: 'SignUp',
+    name: 'LogIn',
 
     data() {
         return {
-            name: '',
             email: '',
             password: ''
         }
     },
 
     methods: {
-        async submit() {
-            let result = await axios.post('http://localhost:3000/users', {
-                name: this.name,
-                email: this.email,
-                password: this.password
-            });
+        async login() {
+          
+            let result = await axios.get(`http://localhost:3000/users?email=${this.email}&password=${this.password}`);
 
-            // console.log(result);
 
-            if (result.status === 201) { // Check result.status instead of result itself
-                localStorage.setItem("userInfo", JSON.stringify(result.data));
+            if (result.status === 200 && result.data.length>0) { 
+                localStorage.setItem("userInfo", JSON.stringify(result.data[0]));
                 this.$router.push({ name: 'HomePage' });
             }
-        }
+            
 
+            // console.log(result);
+        }
 
     },
 
+    
     mounted(){
         let user = localStorage.getItem('userInfo');
         if(user){
             this.$router.push({name:'HomePage'})
         }
     }
-
-
 }
 </script>
-
