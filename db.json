@@ -29,12 +29,20 @@
       "name": "pethum013@gmail.com",
       "email": "pethum013@gmail.com",
       "password": "2453543"
+    }
+  ],
+  "resturents": [
+    {
+      "id": "1",
+      "name": "Burger shop",
+      "contact": "0710790618",
+      "address": "Rambukkana"
     },
     {
-      "id": "2cb3"
-    },
-    {
-      "id": "5757"
+      "id": "2",
+      "name": "Pizza shop",
+      "contact": "0766391966",
+      "address": "Kegalle"
     }
   ]
 }
