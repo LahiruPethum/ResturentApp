@@ -23,12 +23,18 @@
       "name": "dasdas",
       "email": "pethum013@gmail.com",
       "password": "122131"
-    },              
+    },
     {
       "id": "9fb1",
       "name": "pethum013@gmail.com",
       "email": "pethum013@gmail.com",
       "password": "2453543"
+    },
+    {
+      "id": "390d",
+      "name": "fv",
+      "email": "fh",
+      "password": "gh"
     }
   ],
   "resturents": [
@@ -43,6 +49,12 @@
       "name": "Pizza shop",
       "contact": "0766391966",
       "address": "Kegalle"
+    },
+    {
+      "id": "3",
+      "name": "dominos shop",
+      "contact": "0766391966",
+      "address": "Kurunagala"
     }
   ]
 }

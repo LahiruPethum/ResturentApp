@@ -10,9 +10,9 @@
                 <li class="nav-item">
                     <router-link to="/add"><a class="nav-link" >Add Resturant</a></router-link>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <router-link to="/update"> <a class="nav-link" href="#">Update Resturant</a></router-link>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link " href="#" v-on:click="logout">Logout</a>
                 </li>
