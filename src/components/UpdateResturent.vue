@@ -1,23 +1,21 @@
 <template>
     <AppHeader />
-    <h1>Hi {{name}}, Welcome to home page</h1>
+    <h1>Hi {{name}}, Welcome to Update page</h1>
 </template>
 
 <script>
 import AppHeader from './AppHeader.vue' 
 
 export default {
-    name: 'HomePage',
+    name: 'UpdateResturent',
     components: {
         AppHeader 
     },
-    
     data(){
         return{
             name:''
         }
     },
-
     mounted() {
         let user = localStorage.getItem('userInfo');
         this.name = JSON.parse(user).name;

@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar navbar-expand-lg bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <router-link to="/"><a class="navbar-brand"> Navbar</a></router-link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -8,10 +8,10 @@
         <div class="collapse navbar-collapse form-inline" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Add Resturant</a>
+                    <router-link to="/add"><a class="nav-link" >Add Resturant</a></router-link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Update Resturant</a>
+                    <router-link to="/update"> <a class="nav-link" href="#">Update Resturant</a></router-link>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="#" v-on:click="logout">Logout</a>
@@ -45,6 +45,7 @@ export default {
 .nav-link {
     color: white;
     margin-right: 20px;
+    text-decoration: none;
 
 }
 
