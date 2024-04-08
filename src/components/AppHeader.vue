@@ -1,54 +1,64 @@
 <template>
-<nav class="navbar navbar-expand-lg bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse form-inline" id="navbarNav">
-    <ul class="navbar-nav ">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Add Resturant</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Update Resturant</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link " href="#">Logout</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse form-inline" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Add Resturant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Update Resturant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#" v-on:click="logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </template>
 
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.$router.push({name:'LogIn'})
+        }
+    }
 }
+
+
 </script>
 
 <style>
-
-.navbar{
+.navbar {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .nav-link {
     color: white;
     margin-right: 20px;
-    
+
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: yellow;
 }
 
-.navbar-brand{
-    color: white; 
-    margin-left: 20px ;
+.navbar-brand {
+    color: white;
+    margin-left: 20px;
 }
 
-.navbar-brand:hover{
-    color: yellow; 
+.navbar-brand:hover {
+    color: yellow;
 }
 
 .navbar-collapse {

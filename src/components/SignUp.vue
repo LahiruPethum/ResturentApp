@@ -1,6 +1,6 @@
 <template>
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <h1>Sign Up</h1>
+    <h1 style="margin-top: 60px;">Sign Up</h1>
 
     <div class="form position-relative top-0 start-50 translate-middle-x">
         <div class="mb-3">
@@ -74,4 +74,6 @@ export default {
 
 }
 </script>
+
+
 
